@@ -24,7 +24,7 @@ const formate = {
 aiRouter.post("/tour-planner", async (req, res) => {
   try {
     const { from, startDate, endDate, to } = req.body;
-    const prompt = `plan a trip from ${from} to ${to} from date ${startDate} to ${endDate} And i want the response in this formate only ${formate} `;
+    const prompt = `plan a trip from ${from} to ${to} from date ${startDate} to ${endDate}`;
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const text = response.text();

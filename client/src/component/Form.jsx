@@ -1,12 +1,12 @@
-import { Button } from '@mui/material';
+import { Button, colors } from '@mui/material';
 import React, { useState } from 'react';
+import '../styles/form.css';
 
 const Form = () => {
   const [from, setFrom] = useState('');
   const [to, setTo] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
-
   const [tours, setTours] = useState('');
 
   const fetchData = async (body) => {
@@ -41,7 +41,10 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <div className='form_div'>
+      <h3>
+        <span>Make Plan Now !</span>
+      </h3>   
       <form className='form' onSubmit={handleSubmit}>
         <label htmlFor="from">Your Place</label>
         <input type="text" id="from" value={from} placeholder="Enter your place..." onChange={(e) => setFrom(e.target.value)} />
@@ -56,12 +59,9 @@ const Form = () => {
         <Button type="submit">Submit</Button>
       </form>
   
-  <div>
-    
-  </div>
-  <pre>
-    {tours}
-  </pre>
+      <div className='data'>
+        <div dangerouslySetInnerHTML={{ __html: tours.replace(/\*\*([^*]+)\*\*/g, "<h3>$1</h3>").replace(/\*([^*]+)\*/g, "<h4>$1</h4>").replace(/<\/h3>(.*?)<\/h3>/g, "</h3><ul>$1</ul>").replace(/<\/h4>(.*?)<\/h4>/g, "</h4><ul><li>$1</li></ul>") }}></div>
+      </div>
     </div>
   );
 };
