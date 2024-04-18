@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material'
 import { useEffect, useState } from 'react'
 import '../styles/home2.css'
+import Form from '../component/Form';
 
 const Home2 = () => {
     const [userName, setUserName] = useState('');
@@ -32,6 +33,9 @@ const Home2 = () => {
         <Typography variant="h5">
         {greeting} <span>Bhawesh Pandey</span>,<br></br> Welcome to <span>TOURMINDER !</span>
     </Typography>
+    <br>
+    </br>
+    <Form />
     </div>
   )
 }
