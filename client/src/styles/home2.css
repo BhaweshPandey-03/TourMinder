@@ -1,0 +1,27 @@
+.home2 {
+    margin-top: 78px;
+    padding-left: 40px;
+    padding: 10px;
+
+}
+
+.home2>h5 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home2>h5>span {
+    color: rgba(193, 203, 156, 1);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* font-weight: ; */
+    font-size: larger;
+}
+
+.data > div {
+    color:rgba(193, 203, 156, 1);
+}
+
+.data > div > h3 {
+    color:rgba(244, 177, 247, 0.651);
+    font-size: 25px;
+}

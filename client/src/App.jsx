@@ -1,8 +1,16 @@
-// import React from 'react'
+
+import Navigation from "./component/Navigation"
+import AllRoutes from "./AllRoute/AllRoutes"
+import Footer from "./component/Footer"
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Navigation />
+      <AllRoutes />
+      <Footer />
+    </div>
   )
 }
 

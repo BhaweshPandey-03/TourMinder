@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 app.listen(4500, async () => {
   try {
     await connection;
-    console.log("server is running and db is connected");
+    console.log("server is running at port 4500 and db is connected");
   } catch (error) {
     console.log(error);
   }

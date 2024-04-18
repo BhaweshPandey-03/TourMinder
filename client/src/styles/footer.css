@@ -1,0 +1,132 @@
+.footer {
+    background-color: #3A4646;
+    margin-top: 35px;
+}
+
+.foot_one {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.about {
+    display: flex;
+    margin-top: 55px;
+    gap: 12px;
+    font-size: x-large;
+    max-width: 28%;
+    flex-direction: column;
+    color: rgb(226, 225, 225);
+}
+
+.contact {
+    color: aliceblue;
+}
+
+.akash-logo {
+    width: 400px;
+    height: 100px;
+}
+
+.contact th {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    margin-top: 10px;
+    padding-right: 95px;
+    padding-bottom: 25px;
+}
+
+.contact tr {
+    font-size: 14px;
+}
+
+.contact td {
+    padding-bottom: 10px;
+    color: grey;
+}
+
+.contact td:hover {
+    color: #4f88b1;
+    cursor: pointer;
+}
+
+.getUs {
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    color: #fffcfc;
+}
+
+.google_play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.google_play img {
+    width: 200px;
+}
+
+.google_play:hover {
+    cursor: pointer;
+}
+
+.credit {
+    text-align: center;
+    display: flex;
+    margin: 35px 155px;
+    /* Adjusted margin */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box .social-icon {
+    margin-left: 15px;
+    font-size: 26px;
+    color: #b5b5b5;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box .social-icon:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+.credit_tag {
+    color: #cecece;
+}
+
+@media (max-width: 768px) {
+    .foot_one {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about {
+        margin-top: 25px;
+        max-width: 80%;
+        font-size: large;
+    }
+    .akash-logo {
+        width: 300px;
+        height: auto;
+    }
+    .contact th {
+        padding-right: 50px;
+    }
+    .contact td {
+        padding-bottom: 8px;
+    }
+    .getUs {
+        font-size: 20px;
+    }
+    .google_play img {
+        width: 150px;
+    }
+    .credit {
+        display: none;
+    }
+    .box .social-icon {
+        font-size: 22px;
+    }
+}

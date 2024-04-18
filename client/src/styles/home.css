@@ -1,0 +1,92 @@
+body {
+    background-color: #3A4646;
+    font-size: 16px;
+}
+
+.logo>img {
+    width: 150px;
+    padding: 8px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+}
+
+.akash-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.akash-about>p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #E5E6E1;
+    padding: 12px;
+    text-align: center;
+}
+
+.akash-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.akash-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #3A4646;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    border: 1px solid #3A4646;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    margin-left: 0.3rem;
+}
+
+.akash-btn:hover {
+    background-color: #3A4646;
+    color: white;
+    border-color: #3A4646;
+    box-shadow: 0 6px 8px rgba(207, 197, 197, 0.15);
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+    .logo>img {
+        width: 120px;
+    }
+    .hero {
+        margin-top: 50px;
+    }
+    .hero>img {
+        width: 300px;
+    }
+    .akash-about>p {
+        font-size: 18px;
+    }
+    .akash-buttons {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .akash-about>p {
+        font-size: 16px;
+    }
+    .akash-buttons {
+        gap: 15px;
+    }
+}
