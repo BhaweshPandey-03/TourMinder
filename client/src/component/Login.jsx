@@ -18,7 +18,8 @@ function Login() {
               "Content-type":"application/json"
           },
           body: JSON.stringify(payload)
-      }).then(res=>res.json())
+      })
+      .then(res=>res.json())
       .then(data=>{
           console.log(data)
           localStorage.setItem('token', data.token);
@@ -42,7 +43,7 @@ console.log("Username:", username);
     <div><label >Password</label><br/>
     <input className="rinput" type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Enter Your Password"/></div>
     <button className="btn" type="submit" onClick={handleSubmit}>LOGIN</button>
-    <p style={{textAlign:"center"}}>Don't have an Account? <strong className="log" onClick={()=>navigate('/register')} style={{color:"#afc560"}}>SIGN UP</strong></p>
+    <p style={{textAlign:"center"}}> Don't have an Account? <strong className="log" onClick={()=>navigate('/register')} style={{color:"#afc560"}}>SIGN UP</strong></p>
     </div>
   )
 }

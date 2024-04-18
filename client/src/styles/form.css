@@ -1,17 +1,23 @@
-.form > label{
+.b-form > label{
     color:  rgba(193, 203, 156, 1);
     font-size: large;
     font-weight: 600;
+    width: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.form > input{
+.b-form > input{
     font-size: large;
+    height: 30px;
+    width: 100%;
+    padding-left: 10px;
 }
 
-.form {
+.b-form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 40%;
     gap: 14px;
     padding: 20px;
@@ -38,6 +44,7 @@
     color:  black;
     background-color: rgba(193, 203, 156, 1);
     font-size: large;
+    /* width: 35%; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
 }
