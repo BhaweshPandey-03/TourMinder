@@ -1,15 +1,13 @@
-// import React from 'react'
 
 import Navigation from "./component/Navigation"
-import Home from "./pages/Home"
-import Home2 from "./pages/Home2"
+import AllRoutes from "./AllRoute/AllRoutes"
+
 
 const App = () => {
   return (
     <div>
-      {/* <Home /> */}
       <Navigation />
-      <Home2 />
+      <AllRoutes/>
     </div>
   )
 }
