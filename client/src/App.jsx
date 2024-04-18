@@ -1,11 +1,13 @@
-// import React from 'react'
 
-import Home from "./pages/Home"
+import Navigation from "./component/Navigation"
+import AllRoutes from "./AllRoute/AllRoutes"
+
 
 const App = () => {
   return (
     <div>
-      <Home />
+      <Navigation />
+      <AllRoutes/>
     </div>
   )
 }

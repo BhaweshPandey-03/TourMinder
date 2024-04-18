@@ -1,0 +1,16 @@
+
+.home2 {
+    margin-top: 78px;
+    padding: 20px;
+}
+
+.home2 > h5 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.home2 > h5 > span {
+    color:rgba(193, 203, 156, 1);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: ;
+    font-size: larger;
+}
