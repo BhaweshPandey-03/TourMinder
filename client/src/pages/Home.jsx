@@ -3,10 +3,11 @@ import "../styles/home.css"
 import logo from "../assets/Logo.png"
 import hero from "../assets/rafiki.png"
 import { FaArrowRight, FaUserPlus } from 'react-icons/fa';
-
+import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
+    const navigate = useNavigate();
     return (
         <div>
             <div className="logo">
@@ -21,7 +22,7 @@ const Home = () => {
 
             <div className="akash-buttons ">
                 <button className="akash-btn">Get Started <FaArrowRight className='icon' /> </button>
-                <button className="akash-btn">SignUp <FaUserPlus className='icon' /></button>
+                <button className="akash-btn" onClick={()=>navigate('/register')}>SignUp <FaUserPlus className='icon' /></button>
             </div >
 
 
