@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react';
 
 const Form = () => {
   const [from, setFrom] = useState('');
@@ -11,18 +11,20 @@ const Form = () => {
 
   const fetchData = async (body) => {
     try {
-      const res  = fetch('http://localhost:3000/tours', {
+      const res = await fetch('http://localhost:4500/tour-planner', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json'},
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
       });
       const data = await res.json();
+      console.log(typeof data);
       console.log(data);
-      setTours(data)
+      setTours(data.text);
     } catch (error) {
       console.log(error);
     }
-  }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const body = {
@@ -30,30 +32,38 @@ const Form = () => {
       to,
       startDate,
       endDate
-    } 
+    }; 
     fetchData(body);
-  }
+    setFrom('');
+    setTo('');
+    setStartDate('');
+    setEndDate('');
+  };
 
   return (
-
     <div>
-    <form className='form' onSubmit={handleSubmit}>
+      <form className='form' onSubmit={handleSubmit}>
         <label htmlFor="from">Your Place</label>
-        <input type="text" id="from" value={from} placeholder="Enter your place..."/>
+        <input type="text" id="from" value={from} placeholder="Enter your place..." onChange={(e) => setFrom(e.target.value)} />
         <label htmlFor="to">Your Destination</label>
-        <input type="text" id="to" value={to} placeholder="Enter your destination..."/>
+        <input type="text" id="to" value={to} placeholder="Enter your destination..." onChange={(e) => setTo(e.target.value)} />
         
-        <label htmlFor="Start Date">Start Date</label>
-        <input type="calander" id="Start Date" value={startDate} />
-        <label htmlFor="End Date">End Date</label>
-        <input type="calander" id="End Date" value={endDate} />
+        <label htmlFor="startDate">Start Date</label>
+        <input type="date" id="startDate" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+        <label htmlFor="endDate">End Date</label>
+        <input type="date" id="endDate" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
 
         <Button type="submit">Submit</Button>
-    </form>
-    yoo
+      </form>
+  
+  <div>
+    
+  </div>
+  <pre>
+    {tours}
+  </pre>
     </div>
-
-     )
-}
+  );
+};
 
 export default Form;
