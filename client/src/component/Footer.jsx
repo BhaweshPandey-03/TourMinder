@@ -8,7 +8,6 @@ import { FaFacebook, FaTelegram, FaYoutube, FaTwitter, FaInstagram } from 'react
 function Footer() {
     return (
         <div className='footer'>
-
             <div className="foot_one">
                 <div className="about">
                     <img className="akash-logo" src={logo} alt="" />
