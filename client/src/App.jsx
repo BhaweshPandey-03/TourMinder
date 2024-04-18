@@ -1,6 +1,7 @@
 
 import Navigation from "./component/Navigation"
 import AllRoutes from "./AllRoute/AllRoutes"
+import Footer from "./component/Footer"
 
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <div>
       <Navigation />
       <AllRoutes />
+      <Footer />
     </div>
   )
 }

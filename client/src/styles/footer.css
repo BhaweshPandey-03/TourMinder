@@ -1,6 +1,6 @@
 .footer {
     background-color: #3A4646;
-    border-color: #d00000;
+    margin-top: 35px;
 }
 
 .foot_one {
@@ -8,7 +8,6 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    border-color: #d00000;
 }
 
 .about {
@@ -76,7 +75,7 @@
 .credit {
     text-align: center;
     display: flex;
-    margin: 20px 50px;
+    margin: 35px 155px;
     /* Adjusted margin */
     justify-content: space-between;
     align-items: center;

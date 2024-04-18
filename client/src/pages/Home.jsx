@@ -3,7 +3,7 @@ import "../styles/home.css"
 import logo from "../assets/Logo.png"
 import hero from "../assets/rafiki.png"
 import { FaArrowRight, FaUserPlus } from 'react-icons/fa';
-import Footer from '../component/Footer';
+
 
 
 const Home = () => {
@@ -24,7 +24,7 @@ const Home = () => {
                 <button className="akash-btn">SignUp <FaUserPlus className='icon' /></button>
             </div >
 
-            <Footer />
+
 
         </div >
     )
