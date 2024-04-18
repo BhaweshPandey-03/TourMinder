@@ -15,7 +15,7 @@ body {
     margin-top: 75px;
 }
 
-.about {
+.akash-about {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +23,7 @@ body {
     padding: 0 20px;
 }
 
-.about>p {
+.akash-about>p {
     font-size: 20px;
     font-weight: 600;
     color: #E5E6E1;
@@ -31,14 +31,14 @@ body {
     text-align: center;
 }
 
-.buttons {
+.akash-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-.btn {
+.akash-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +56,7 @@ body {
     margin-left: 0.3rem;
 }
 
-.btn:hover {
+.akash-btn:hover {
     background-color: #3A4646;
     color: white;
     border-color: #3A4646;
@@ -74,19 +74,19 @@ body {
     .hero>img {
         width: 300px;
     }
-    .about>p {
+    .akash-about>p {
         font-size: 18px;
     }
-    .buttons {
+    .akash-buttons {
         flex-direction: column;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .about>p {
+    .akash-about>p {
         font-size: 16px;
     }
-    .buttons {
+    .akash-buttons {
         gap: 15px;
     }
 }
