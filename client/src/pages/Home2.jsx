@@ -7,6 +7,11 @@ const Home2 = () => {
     const [userName, setUserName] = useState('');
     const [greeting, setGreeting] = useState('');
     useEffect(() => {
+        const storedUserName = localStorage.getItem('username');
+        if (storedUserName) {
+            setUserName(storedUserName);
+        }
+
         const time = new Date().toTimeString().split(" ")[0].slice(0,2);
         console.log(time);
 
@@ -20,10 +25,10 @@ const Home2 = () => {
         setGreeting("Good Evening");
     }
     else if(time > 20 && time < 24){
-        setGreeting("Good Night");
+        setGreeting("Good Evening");
     }
     else {
-        setGreeting("Good Day");
+        setGreeting("Good Evening");
     }
     }, [])
     
@@ -31,7 +36,7 @@ const Home2 = () => {
     
     <div className='home2'>
         <Typography variant="h5">
-        {greeting} <span>Bhawesh Pandey</span>,<br></br> Welcome to <span>TOURMINDER !</span>
+        {greeting} <span>{userName}</span>,<br></br> Welcome to <span>TOURMINDER !</span>
     </Typography>
     <br>
     </br>

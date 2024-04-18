@@ -1,0 +1,49 @@
+.form > label{
+    color:  rgba(193, 203, 156, 1);
+    font-size: large;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.form > input{
+    font-size: large;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 14px;
+    padding: 20px;
+    padding-top: 25px;
+    border-radius: 5%;
+    border: 1px solid rgba(193, 203, 156, 1);
+}
+
+.form_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.form_div h3 {
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(193, 203, 156, 1);
+}
+
+.form_div Button {
+    color:  black;
+    background-color: rgba(193, 203, 156, 1);
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+}
+
+.form_div Button:hover {
+    color: rgba(193, 203, 156, 1);
+    /* background-color: rgba(244, 177, 247, 0.651); */
+    background-color:black;
+}
