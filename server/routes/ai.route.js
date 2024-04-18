@@ -24,15 +24,16 @@ const formate = {
 aiRouter.post("/tour-planner", async (req, res) => {
   try {
     const { from, startDate, endDate, to } = req.body;
+
     const prompt = `plan a trip from ${from} to ${to} from date ${startDate} to ${endDate}`;
+
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const text = response.text();
-    console.log(text);
     // const jsonData = JSON.parse(text);
+    console.log(text);
     res.send({
-      msg: "here is the data ",
-      text,
+        text,
     });
   } catch (err) {
     console.log(err);
