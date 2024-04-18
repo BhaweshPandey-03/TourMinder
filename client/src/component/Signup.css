@@ -1,0 +1,53 @@
+.MainC{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.middle{
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.discount{
+  background-color: rgb(226, 225, 225);
+  text-align: center;
+}
+.rmain{
+  width: 30%;
+  margin: auto;
+  height: auto;
+  border-radius: 20px;
+  margin-top: 30px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid #afc560;
+  color: whitesmoke;
+  box-sizing: border-box;
+}
+input{
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #afc560;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.btn{
+  width: 100%;
+  height: 40px;
+  background-color: #afc560;
+  color: black;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+  font-weight: 600;
+}
+.log:hover{
+    cursor: pointer;
+}
