@@ -88,7 +88,7 @@ TourMinder is a collabrative project. Meet our collaborators:
 
 Akash Yadav
 <br>
-Bhawesh Pandey fw29_151
+Bhawesh Pandey
 <br>
 Shlok Gaikwad
 <br>
