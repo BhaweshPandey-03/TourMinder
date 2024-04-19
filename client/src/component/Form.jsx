@@ -1,8 +1,11 @@
 import { Button, colors } from '@mui/material';
 import React, { useState } from 'react';
 import '../styles/form.css';
+// import 'dotenv/config';
 // import * as React from 'react';
 import Backdrop from '@mui/material/Backdrop';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 import CircularProgress from '@mui/material/CircularProgress';
 // import Button from '@mui/material/Button';
 import SimpleBackdrop from './SbtButton';
@@ -14,7 +17,28 @@ const Form = () => {
   const [endDate, setEndDate] = useState('');
   const [tours, setTours] = useState('');
   const [open, setOpen] = React.useState(false);
+  const [email, setEmail] = React.useState(false);
 
+  const [open2, setOpen2] = useState(false);
+  const handleClick = () => {
+    setOpen2(true);
+  };
+
+  const handleClose2 = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  const getCurrentDate = () => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = (now.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-indexed
+    const day = now.getDate().toString().padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
 
   const handleClose = () => {
     setOpen(false);
@@ -24,7 +48,7 @@ const Form = () => {
   };
   const fetchData = async (body) => {
     try {
-      const res = await fetch('http://localhost:4500/tour-planner', {
+      const res = await fetch(`https://tourminder.onrender.com/tour-planner`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
@@ -33,6 +57,7 @@ const Form = () => {
       console.log(typeof data);
       console.log(data);
       setTours(data.text);
+      setEmail(true);
       handleClose();
     } catch (error) {
       console.log(error);
@@ -70,7 +95,10 @@ const Form = () => {
       .catch = (err) => {
         console.log(err);
       }
-
+      handleClick();
+     setTimeout(() => {
+       setOpen2(false);
+     },2000)
   }
 
   return (
@@ -85,10 +113,10 @@ const Form = () => {
         <input type="text" id="to" value={to} placeholder="Enter your destination..." onChange={(e) => setTo(e.target.value)} />
 
         <label htmlFor="startDate">Start Date</label>
-        <input type="date" id="startDate" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
-        <label htmlFor="endDate">End Date</label>
-        <input type="date" id="endDate" value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+<input type="date" id="startDate" value={startDate} onChange={(e) => setStartDate(e.target.value)} min={getCurrentDate()} />
 
+<label htmlFor="endDate">End Date</label>
+<input type="date" id="endDate" value={endDate} onChange={(e) => setEndDate(e.target.value)} min={getCurrentDate()} />
         {/* <Button type="submit">Submit</Button> */}
         {/* <SimpleBackdrop  /> */}
         {
@@ -110,7 +138,17 @@ const Form = () => {
         <div dangerouslySetInnerHTML={{ __html: tours.replace(/\*\*([^*]+)\*\*/g, "<h3>$1</h3>").replace(/\*([^*]+)\*/g, "<h4>$1</h4>").replace(/<\/h3>(.*?)<\/h3>/g, "</h3><ul>$1</ul>").replace(/<\/h4>(.*?)<\/h4>/g, "</h4><ul><li>$1</li></ul>") }}></div>
       </div>
 
-      <button onClick={sendEmail} className='akash-btn mail-btn'>Get this via mail</button>
+      {email && <button onClick={sendEmail} className='akash-btn mail-btn'>Get this via mail</button>}
+       <Snackbar open={open2} autoHideDuration={6000} onClose={handleClose2}>
+        <Alert
+          onClose={handleClose2}
+          severity="success"
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          Your trip plan is sent to your email successfully !
+        </Alert>
+      </Snackbar> 
     </div>
   );
 };
