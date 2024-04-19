@@ -11,8 +11,9 @@ function Footer() {
             <div className="foot_one">
                 <div className="about">
                     <img className="akash-logo" src={logo} alt="" />
-                    <h6>TourMindzer: Your AI-Powered Travel Companion! Unlock personalized trip suggestions tailored to your dream destinations, all at the tip of your fingers. Embark on unforgettable journeys with smart recommendations that understand and cater to your travel desires.</h6>
+                    <h6>TourMindzer: Your AI-Powered Travel Companion! Unlock personalized trip suggestions tailored to your dream destinations, all at the tip of your fingers. </h6>
                 </div>
+
                 <div className="contact">
                     <table>
                         <thead>
@@ -46,7 +47,7 @@ function Footer() {
                     </table>
                 </div>
             </div>
-
+            <hr />
             <div className="getUs">
                 <h5>GET OUR APP TODAY</h5>
                 <div className="google_play">
@@ -54,7 +55,7 @@ function Footer() {
                     <img src={apple} alt="appstore" />
                 </div>
             </div>
-
+            <hr />
             <div className="credit">
                 <div className="credit_tag">
                     <p>© 2024 All Rights Reserved</p>
