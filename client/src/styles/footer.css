@@ -1,6 +1,5 @@
 .footer {
-    background-color: #3A4646;
-    margin-top: 35px;
+    margin-top: 80px;
 }
 
 .foot_one {
@@ -12,8 +11,8 @@
 
 .about {
     display: flex;
-    margin-top: 55px;
-    gap: 12px;
+    margin-top: 5px;
+    gap: 2px;
     font-size: x-large;
     max-width: 28%;
     flex-direction: column;
@@ -25,12 +24,12 @@
 }
 
 .akash-logo {
-    width: 400px;
-    height: 100px;
+    width: 350px;
+    height: 70px;
 }
 
 .contact th {
-    color: rgb(255, 255, 255);
+    color: rgba(193, 203, 156, 1);
     font-size: 16px;
     margin-top: 10px;
     padding-right: 95px;
@@ -43,7 +42,7 @@
 
 .contact td {
     padding-bottom: 10px;
-    color: grey;
+    color: #ffffff;
 }
 
 .contact td:hover {
@@ -52,16 +51,24 @@
 }
 
 .getUs {
-    height: 100px;
+    /* height: 100px; */
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.getUs h5 {
     text-align: center;
     font-size: 25px;
-    color: #fffcfc;
+    color: rgba(193, 203, 156, 1);
 }
 
 .google_play {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -80px;
+    margin-bottom: -50px;
 }
 
 .google_play img {
@@ -76,9 +83,12 @@
     text-align: center;
     display: flex;
     margin: 35px 155px;
-    /* Adjusted margin */
     justify-content: space-between;
     align-items: center;
+}
+
+hr {
+    max-width: 80%;
 }
 
 .box .social-icon {
@@ -123,9 +133,9 @@
     .google_play img {
         width: 150px;
     }
-    .credit {
+    /* .credit {
         display: none;
-    }
+    } */
     .box .social-icon {
         font-size: 22px;
     }
