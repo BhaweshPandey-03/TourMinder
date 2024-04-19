@@ -54,7 +54,8 @@ The development focused on creating an intuitive and secure platform that emphas
 ![Screenshot 2024-04-19 162736](https://github.com/BhaweshPandey-03/TourMinder/assets/150121687/ca3bceb2-32de-46e0-8c80-afd70a16e021)
 
 # SignIn / SignUp
-![Screenshot 2024-04-05 111024](https://github.com/Yawer091/Code-Kaavya-2345/assets/150121687/dadc573d-eb6d-4d52-a6bd-d553c732d1ef)
+![Uploading Screenshot 2024-04-19 164051.png…]()
+
 
 # Mid-Section
 ![Screenshot 2024-04-19 162847](https://github.com/BhaweshPandey-03/TourMinder/assets/150121687/4320f905-9de5-417c-b332-ca0aecc001e2)
