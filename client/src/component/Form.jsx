@@ -83,7 +83,7 @@ const Form = () => {
     const email = localStorage.getItem('email');
     const body = tours
 
-    fetch("http://localhost:4500/send-mail", {
+    fetch("https://tourminder.onrender.com/send-mail", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
