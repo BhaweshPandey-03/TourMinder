@@ -14,6 +14,8 @@ const Form = () => {
   const [endDate, setEndDate] = useState('');
   const [tours, setTours] = useState('');
   const [open, setOpen] = React.useState(false);
+
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -44,25 +46,44 @@ const Form = () => {
       to,
       startDate,
       endDate
-    }; 
+    };
     fetchData(body);
     setFrom('');
     setTo('');
     setStartDate('');
     setEndDate('');
   };
+  const sendEmail = () => {
+    console.log("mail clicked");
+    const email = localStorage.getItem('email');
+    const body = tours
+
+    fetch("http://localhost:4500/send-mail", {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email,
+        body
+      })
+    }).then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch = (err) => {
+        console.log(err);
+      }
+
+  }
 
   return (
     <div className='form_div'>
       <h3>
         <span>Make Plan Now !</span>
-      </h3>   
+      </h3>
       <form className='b-form' onSubmit={handleSubmit}>
         <label htmlFor="from">Your Place</label>
         <input type="text" id="from" value={from} placeholder="Enter your place..." onChange={(e) => setFrom(e.target.value)} />
         <label htmlFor="to">Your Destination</label>
         <input type="text" id="to" value={to} placeholder="Enter your destination..." onChange={(e) => setTo(e.target.value)} />
-        
+
         <label htmlFor="startDate">Start Date</label>
         <input type="date" id="startDate" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
         <label htmlFor="endDate">End Date</label>
@@ -72,22 +93,24 @@ const Form = () => {
         {/* <SimpleBackdrop  /> */}
         {
           <div>
-      <Button type='submit' onClick={handleOpen}>submit</Button>
-      <Backdrop
-        sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
-        open={open}
-        onClick={handleClose}
-      >
-        <CircularProgress color="inherit" />
-      </Backdrop>
-    </div>
+            <Button type='submit' onClick={handleOpen}>submit</Button>
+            <Backdrop
+              sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+              open={open}
+              onClick={handleClose}
+            >
+              <CircularProgress color="inherit" />
+            </Backdrop>
+          </div>
         }
-        
+
       </form>
-  
+
       <div className='data'>
         <div dangerouslySetInnerHTML={{ __html: tours.replace(/\*\*([^*]+)\*\*/g, "<h3>$1</h3>").replace(/\*([^*]+)\*/g, "<h4>$1</h4>").replace(/<\/h3>(.*?)<\/h3>/g, "</h3><ul>$1</ul>").replace(/<\/h4>(.*?)<\/h4>/g, "</h4><ul><li>$1</li></ul>") }}></div>
       </div>
+
+      <button onClick={sendEmail} className='akash-btn mail-btn'>Get this via mail</button>
     </div>
   );
 };
