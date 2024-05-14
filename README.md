@@ -48,7 +48,7 @@ https://drive.google.com/drive/folders/1YmUuJiy5q_uRkruQVkymZqLcCDsv__aD?usp=dri
 - Quick response on requests
 
 ## Design Decisions or Assumptions
-The development focused on creating an intuitive and secure platform that emphasizes community building among food enthusiasts. Assumptions include a high engagement rate based on quality content and user-friendly features.
+The development focused on creating an intuitive and secure platform that emphasizes supporting traveling community. Assumptions include a high engagement rate based on quality content and quick response and user-friendly features.
 
 # Navbar
 ![Screenshot 2024-04-19 162736](https://github.com/BhaweshPandey-03/TourMinder/assets/150121687/ca3bceb2-32de-46e0-8c80-afd70a16e021)
