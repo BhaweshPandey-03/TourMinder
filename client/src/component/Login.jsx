@@ -43,7 +43,7 @@ function Login() {
     }
    
      try {
-      const res = await fetch(`https://tourminder.onrender.com/login`, {
+      const res = await fetch(`https://tourminder-backend.onrender.com/login`, {
         method: "POST",
         headers: {
           "Content-type": "application/json"

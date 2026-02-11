@@ -42,7 +42,7 @@ export default function Register() {
             password
         }
         try {
-            const res = await fetch(`https://tourminder.onrender.com/signup`,{
+            const res = await fetch(`https://tourminder-backend.onrender.com/signup`,{
                 method: "POST",
                 headers:{
                     "Content-type":"application/json"

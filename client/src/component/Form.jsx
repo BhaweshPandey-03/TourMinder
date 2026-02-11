@@ -48,7 +48,7 @@ const Form = () => {
   };
   const fetchData = async (body) => {
     try {
-      const res = await fetch(`https://tourminder.onrender.com/tour-planner`, {
+      const res = await fetch(`https://tourminder-backend.onrender.com/tour-planner`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
@@ -83,7 +83,7 @@ const Form = () => {
     const email = localStorage.getItem('email');
     const body = tours
 
-    fetch("https://tourminder.onrender.com/send-mail", {
+    fetch("https://tourminder-backend.onrender.com/send-mail", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
