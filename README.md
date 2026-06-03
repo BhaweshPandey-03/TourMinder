@@ -85,7 +85,7 @@ npm run server
 
 ## Contributors
 TourMinder is a collabrative project. Meet our collaborators:
-
+ 
 Akash Yadav
 <br>
 Bhawesh Pandey
